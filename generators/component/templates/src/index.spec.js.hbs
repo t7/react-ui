@@ -1,0 +1,10 @@
+import React from 'react'
+import { render } from 'react-testing-library'
+import {{properCase name}} from './'
+
+describe('{{properCase name}} component', () => {
+  it('should render with text', () => {
+    const { container } = render(<{{properCase name}} />)
+    expect(container.textContent).toBe('This is a {{properCase name}} component!')
+  })
+})
