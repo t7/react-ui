@@ -1,0 +1,26 @@
+/*
+Inline list.
+============================================================
+*/
+
+._1oOOpYUGkMkV0yf6pRqj6G,
+._1oOOpYUGkMkV0yf6pRqj6G > li {
+  margin: 0;
+  padding: 0;
+}
+
+._1oOOpYUGkMkV0yf6pRqj6G {
+  font-size: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-bottom: 20px;
+}
+
+._1oOOpYUGkMkV0yf6pRqj6G > li {
+  font-size: 1rem;
+  display: inline-block;
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+

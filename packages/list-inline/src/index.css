@@ -1,0 +1,25 @@
+/*
+Inline list.
+============================================================
+*/
+
+.list-inline,
+.list-inline > li {
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline {
+  font-size: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-bottom: 20px;
+}
+
+.list-inline > li {
+  font-size: 1rem;
+  display: inline-block;
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 10px;
+}

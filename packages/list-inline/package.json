@@ -1,0 +1,30 @@
+{
+  "name": "@t7/list-inline",
+  "version": "0.0.7",
+  "author": "TandemSeven <github@tandemseven.com>",
+  "description": "Create a React inline list from an unordered HTML list (<ul>/<li>)",
+  "keywords": [
+    "list",
+    "inline",
+    "listitem",
+    "unordered",
+    "t7",
+    "tandemseven"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config ../../webpack.config.js",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  }
+}
