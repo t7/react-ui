@@ -22,13 +22,27 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: `${DEST_DIR}/src/index.spec.js`,
-        templateFile: `${SRC_DIR}/src/index.spec.js.hbs`
+        path: `${DEST_DIR}/src/index.test.js`,
+        templateFile: `${SRC_DIR}/src/index.test.js.hbs`
+      },
+      {
+        type: 'add',
+        path: `${DEST_DIR}/LICENSE`,
+        templateFile: `${SRC_DIR}/LICENSE.hbs`
       },
       {
         type: 'add',
         path: `${DEST_DIR}/package.json`,
         templateFile: `${SRC_DIR}/package.json.hbs`
+      },
+      {
+        type: 'add',
+        path: `${DEST_DIR}/README.md`,
+        templateFile: `${SRC_DIR}/README.md.hbs`
+      },
+      {
+        type: 'install',
+        path: DEST_DIR
       }
     ]
   })

@@ -1,0 +1,100 @@
+/*
+Tabs group.
+============================================================
+*/
+
+._2IoFRJUevQ1Uwlki7AfSGC {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+/*
+Tab list.
+============================================================
+*/
+
+.-Y11TzhgjMpERIcLb9zKx,
+._13IxUnjtnihrqvC-MI-D9f {
+  list-style: none;
+  margin: 0;
+}
+
+._13IxUnjtnihrqvC-MI-D9f {
+  font-size: 0;
+  margin-bottom: -1px;
+  padding-left: 15px;
+  padding-right: 20px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.-Y11TzhgjMpERIcLb9zKx {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  background: #f6f6f6;
+  border: 1px solid #ddd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  margin-left: 5px;
+  padding: 5px 10px;
+  outline: 0;
+}
+
+.-Y11TzhgjMpERIcLb9zKx:hover {
+  background: #ffd;
+}
+
+.-Y11TzhgjMpERIcLb9zKx[aria-selected="true"] {
+  background: #fff;
+  border-bottom-color: #fff;
+}
+
+.-Y11TzhgjMpERIcLb9zKx:focus {
+  border-color: #39f;
+  box-shadow: #39f 0 0 2px 0;
+}
+
+/*
+Tab panel.
+============================================================
+*/
+
+.G7FBAw2IObvXnbxaQThjP {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 0;
+}
+
+.G7FBAw2IObvXnbxaQThjP[aria-hidden="true"] {
+  display: none;
+}
+
+/*
+Clear floated content.
+*/
+
+.G7FBAw2IObvXnbxaQThjP::before,
+.G7FBAw2IObvXnbxaQThjP::after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.G7FBAw2IObvXnbxaQThjP::after {
+  clear: both;
+}
+

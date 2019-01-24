@@ -1,0 +1,26 @@
+---
+name: "@t7/render"
+---
+
+import { Playground, PropsTable } from 'docz'
+import Render from './'
+
+# @t7/render
+
+<PropsTable of={Render} />
+
+## Basic Usage
+
+<Playground>
+  <Render if={true}>
+    <p>
+      A truthy condition will render this text.
+    </p>
+  </Render>
+  
+  <Render if={false}>
+    <p>
+      A falsy condition will NOT render this text.
+    </p>
+  </Render>
+</Playground>
