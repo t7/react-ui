@@ -88,7 +88,6 @@ class Tabs extends Component {
                   index={i}
                   key={idTab}
                   label={label}
-
                   handleClick={handleClick}
                 />
               )
@@ -118,6 +117,7 @@ class Tabs extends Component {
                 aria-hidden={!isActive}
                 aria-labelledby={idTab}
                 className={styles.panel}
+                data-testid='panel'
                 id={idPanel}
                 key={idPanel}
                 role='tabpanel'

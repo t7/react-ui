@@ -4,9 +4,10 @@ import PropTypes from 'prop-types'
 
 // Utility methods.
 import { bind } from '@t7/utils'
+import styles from './index.css'
 
 // Define class.
-class Tab extends React.Component {
+class AccordionHeader extends React.Component {
   constructor (props) {
     // Pass `props` into scope.
     super(props)
@@ -50,27 +51,32 @@ class Tab extends React.Component {
     const handleClick = this.handleClick
 
     return (
-      <li
+      <dt
         aria-controls={ariaControls}
         aria-expanded={ariaExpanded}
+        aria-hidden={!ariaSelected}
         aria-selected={ariaSelected}
         className={className}
-        data-testid='tab'
         id={id}
         key={id}
         role='tab'
         tabIndex='0'
+
         onClick={handleClick}
         onKeyDown={handleClick}
       >
+        <span
+          aria-hidden='true'
+          className={styles.icon}
+        />
         {label}
-      </li>
+      </dt>
     )
   }
 }
 
 // Validation.
-Tab.propTypes = {
+AccordionHeader.propTypes = {
   ariaControls: PropTypes.string,
   ariaExpanded: PropTypes.bool,
   ariaSelected: PropTypes.bool,
@@ -84,10 +90,10 @@ Tab.propTypes = {
 }
 
 // Defaults.
-Tab.defaultProps = {
+AccordionHeader.defaultProps = {
   ariaExpanded: false,
   ariaSelected: false
 }
 
 // Export.
-export default Tab
+export default AccordionHeader

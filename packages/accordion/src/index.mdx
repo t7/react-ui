@@ -1,0 +1,19 @@
+---
+name: "@t7/accordion"
+---
+
+import { Playground, PropsTable } from 'docz'
+import Accordion, { AccordionPanel } from './'
+
+# @t7/accordion
+
+<PropsTable of={Accordion} />
+
+## Basic Usage
+
+<Playground>
+  <Accordion selected={{ 0: true }}>
+    <AccordionPanel label="Item 1"><p>Content for Item 1</p></AccordionPanel>
+    <AccordionPanel label="Item 2"><p>Content for Item 2</p></AccordionPanel>
+  </Accordion>
+</Playground>

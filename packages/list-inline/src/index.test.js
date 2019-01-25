@@ -1,10 +1,17 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import { cleanup, render } from 'react-testing-library'
 import ListInline from './'
 
 describe('ListInline component', () => {
-  it('should render with text', () => {
-    const { container } = render(<ListInline />)
-    expect(container.textContent).toBe('This is a ListInline component!')
+  afterEach(cleanup)
+
+  it('has list items', () => {
+    const { getAllByTestId } = render(
+      <ListInline>
+        <li data-testid='item'>list_item_0</li>
+        <li data-testid='item'>list_item_1</li>
+      </ListInline>
+    )
+    expect(getAllByTestId('item').length).toBe(2)
   })
 })
