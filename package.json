@@ -11,13 +11,13 @@
     "create": "plop",
     "docz": "docz dev",
     "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint '**/*.css' --fix",
-    "lint:js": "eslint '**/*.js' --cache --fix",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:js": "eslint '**/*.js' --cache",
     "test": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run lint && npm run test"
     }
   },
   "devDependencies": {
