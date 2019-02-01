@@ -3,7 +3,7 @@ module.exports = {
   modifyBundlerConfig: (config) => {
     config.module.rules.push({
       test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      use: ['style-loader', 'css-loader', 'postcss-loader']
     })
     return config
   },
