@@ -1,14 +1,14 @@
 // Dependencies.
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './index.css'
+import './index.css'
 
 // Define class.
 class ListInline extends React.Component {
   // Render method.
   render () {
     return (
-      <ul className={styles['list-inline']}>
+      <ul className='t7-list-inline'>
         {this.props.children}
       </ul>
     )

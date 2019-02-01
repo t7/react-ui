@@ -55,11 +55,11 @@ class Tab extends React.Component {
         aria-expanded={ariaExpanded}
         aria-selected={ariaSelected}
         className={className}
-        data-testid='tab'
         id={id}
         key={id}
         role='tab'
         tabIndex='0'
+
         onClick={handleClick}
         onKeyDown={handleClick}
       >

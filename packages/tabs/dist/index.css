@@ -3,7 +3,7 @@ Tabs group.
 ============================================================
 */
 
-._2IoFRJUevQ1Uwlki7AfSGC {
+.t7-tabs {
   clear: both;
   margin-bottom: 20px;
 }
@@ -13,13 +13,13 @@ Tab list.
 ============================================================
 */
 
-.-Y11TzhgjMpERIcLb9zKx,
-._13IxUnjtnihrqvC-MI-D9f {
+.t7-tabs__item,
+.t7-tabs__list {
   list-style: none;
   margin: 0;
 }
 
-._13IxUnjtnihrqvC-MI-D9f {
+.t7-tabs__list {
   font-size: 0;
   margin-bottom: -1px;
   padding-left: 15px;
@@ -29,7 +29,7 @@ Tab list.
   z-index: 1;
 }
 
-.-Y11TzhgjMpERIcLb9zKx {
+.t7-tabs__item {
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -46,16 +46,16 @@ Tab list.
   outline: 0;
 }
 
-.-Y11TzhgjMpERIcLb9zKx:hover {
+.t7-tabs__item:hover {
   background: #ffd;
 }
 
-.-Y11TzhgjMpERIcLb9zKx[aria-selected="true"] {
+.t7-tabs__item[aria-selected="true"] {
   background: #fff;
   border-bottom-color: #fff;
 }
 
-.-Y11TzhgjMpERIcLb9zKx:focus {
+.t7-tabs__item:focus {
   border-color: #39f;
   box-shadow: #39f 0 0 2px 0;
 }
@@ -65,7 +65,7 @@ Tab panel.
 ============================================================
 */
 
-.G7FBAw2IObvXnbxaQThjP {
+.t7-tabs__panel {
   border: 1px solid #ddd;
   border-radius: 3px;
   padding-top: 20px;
@@ -74,7 +74,7 @@ Tab panel.
   z-index: 0;
 }
 
-.G7FBAw2IObvXnbxaQThjP[aria-hidden="true"] {
+.t7-tabs__panel[aria-hidden="true"] {
   display: none;
 }
 
@@ -82,8 +82,8 @@ Tab panel.
 Clear floated content.
 */
 
-.G7FBAw2IObvXnbxaQThjP::before,
-.G7FBAw2IObvXnbxaQThjP::after {
+.t7-tabs__panel::before,
+.t7-tabs__panel::after {
   content: ".";
   display: block;
   overflow: hidden;
@@ -94,7 +94,7 @@ Clear floated content.
   height: 0;
 }
 
-.G7FBAw2IObvXnbxaQThjP::after {
+.t7-tabs__panel::after {
   clear: both;
 }
 

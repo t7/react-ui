@@ -1,11 +1,48 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import { bind, unique } from '@t7/utils'
-import styles from './index.css'
-import TabPanel from './template_panel'
-import Tab from './template_tab'
+/*
+  //=========================================
+  // This approach lets you to treat each tab
+  // and its content as one logical grouping.
+  //=========================================
+  //==============
+  // React code...
+  //==============
+  <Tabs selected={0}>
+    <TabPanel label='Foo'>
+      <p>
+        Tab content for "Foo"
+      </p>
+    </TabPanel>
+    <TabPanel label='Bar'>
+      <p>
+        Tab content for "Bar"
+      </p>
+    </TabPanel>
+    <TabPanel label='Baz'>
+      <p>
+        Tab content for "Baz"
+      </p>
+    </TabPanel>
+  </Tabs>
+*/
 
-class Tabs extends Component {
+// Dependencies.
+import React from 'react'
+import PropTypes from 'prop-types'
+
+// Utility methods.
+// import fake from '../../fake'
+import {
+  bind,
+  unique
+} from '@t7/utils'
+
+// UI components.
+import Tab from './template_tab'
+import TabPanel from './template_panel'
+import './index.css'
+
+// Define class.
+class Tabs extends React.Component {
   constructor (props) {
     // Pass `props` into scope.
     super(props)
@@ -64,8 +101,8 @@ class Tabs extends Component {
     const handleClick = this.handleClick
 
     return (
-      <div className={styles.tabs} id={id}>
-        <ul role='tablist' className={styles.list}>
+      <div className='t7-tabs' id={id}>
+        <ul role='tablist' className='t7-tabs__list'>
           {
             children.map((panel, i) => {
               // Tab label.
@@ -83,11 +120,12 @@ class Tabs extends Component {
                   ariaControls={idPanel}
                   ariaExpanded={isActive}
                   ariaSelected={isActive}
-                  className={styles.item}
+                  className='t7-tabs__item'
                   id={idTab}
                   index={i}
                   key={idTab}
                   label={label}
+
                   handleClick={handleClick}
                 />
               )
@@ -116,8 +154,7 @@ class Tabs extends Component {
               <div
                 aria-hidden={!isActive}
                 aria-labelledby={idTab}
-                className={styles.panel}
-                data-testid='panel'
+                className='t7-tabs__panel'
                 id={idPanel}
                 key={idPanel}
                 role='tabpanel'
@@ -148,5 +185,6 @@ Tabs.defaultProps = {
   selected: 0
 }
 
+// Export.
 export default Tabs
 export { TabPanel }

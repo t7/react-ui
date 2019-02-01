@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 // Utility methods.
 import { bind } from '@t7/utils'
-import styles from './index.css'
 
 // Define class.
 class AccordionHeader extends React.Component {
@@ -54,7 +53,6 @@ class AccordionHeader extends React.Component {
       <dt
         aria-controls={ariaControls}
         aria-expanded={ariaExpanded}
-        aria-hidden={!ariaSelected}
         aria-selected={ariaSelected}
         className={className}
         id={id}
@@ -67,7 +65,7 @@ class AccordionHeader extends React.Component {
       >
         <span
           aria-hidden='true'
-          className={styles.icon}
+          className='t7-accordion__header__icon'
         />
         {label}
       </dt>

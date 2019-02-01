@@ -1,11 +1,25 @@
+/* global
+describe
+expect
+it
+jest
+*/
+
+// Dependencies.
 import React from 'react'
-import { cleanup, fireEvent, render } from 'react-testing-library'
-import Tabs, { TabPanel } from './'
+import T from 'react-dom/test-utils'
 
-describe('ListInline component', () => {
-  afterAll(cleanup)
+// UI components.
 
-  const { getAllByTestId } = render(
+import Tabs from './'
+import TabPanel from './template_panel'
+
+jest.disableAutomock()
+
+// Describe `<Component/>` name.
+describe('Tabs', () => {
+  // Insert the component into DOM.
+  const el = T.renderIntoDocument(
     <Tabs selected={0}>
       <TabPanel label='Tab 1'>
         <p>
@@ -20,28 +34,43 @@ describe('ListInline component', () => {
     </Tabs>
   )
 
-  const tabs = getAllByTestId('tab')
-  const panels = getAllByTestId('panel')
+  // Get parent element.
+  const parent = T.findRenderedDOMComponentWithClass(el, 't7-tabs')
+
+  // Get headers and panels.
+  const tabs = parent.querySelectorAll('.t7-tabs__item')
+  const panels = parent.querySelectorAll('.t7-tabs__panel')
+
+  // ===================
+  // Test for existence.
+  // ===================
+
+  it('exists in the page', () => {
+    expect(T.isCompositeComponent(el)).toBe(true)
+  })
+
+  // ==============
+  // Test for tabs.
+  // ==============
 
   it('has child tabs', () => {
     expect(tabs.length).toBe(2)
   })
 
+  // ================
+  // Test for panels.
+  // ================
+
   it('has child panels', () => {
     expect(panels.length).toBe(2)
   })
 
+  // ================
+  // Test for events.
+  // ================
+
   it('responds to clicks', () => {
-    // First panel = off.
-    expect(tabs[0].getAttribute('aria-selected')).toBe('true')
-    expect(panels[0].getAttribute('aria-hidden')).toBe('false')
-
-    // Second panel = on.
-    expect(tabs[1].getAttribute('aria-selected')).toBe('false')
-    expect(panels[1].getAttribute('aria-hidden')).toBe('true')
-
-    // Second tab clicked.
-    fireEvent.click(tabs[1])
+    T.Simulate.click(tabs[1])
 
     // First panel = off.
     expect(tabs[0].getAttribute('aria-selected')).toBe('false')

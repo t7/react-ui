@@ -1,3 +1,13 @@
+/*
+  // Used like so…
+  <Render if={this.props.bool}>
+    <p>
+      Super secret UI.
+    </p>
+  </Render>
+*/
+
+// Dependencies.
 import React from 'react'
 import PropTypes from 'prop-types'
 
