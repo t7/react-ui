@@ -1,23 +1,24 @@
 {
-  "name": "@t7/accordion",
-  "version": "0.0.7",
+  "name": "@t7/tabs",
+  "version": "0.0.17",
   "author": "TandemSeven <github@tandemseven.com>",
-  "description": "Create a React 'accordion' style component from a single structure",
+  "description": "This React component renders tabs and the related panels",
   "keywords": [
-    "accordion",
-    "expanded",
+    "tab",
+    "panel",
+    "tabpanel",
+    "tablist",
+    "react",
     "t7",
     "tandemseven"
   ],
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --config ../../webpack.config.js",
-    "prepublish": "npm run build"
+    "build": "webpack --config ../../../webpack.config.js"
   },
   "dependencies": {
     "@t7/utils": "0.0.14",
-    "lodash": "^4.17.11",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
