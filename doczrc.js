@@ -7,6 +7,7 @@ module.exports = {
     })
     return config
   },
+  title: '@t7/components',
   themeConfig: {
     showPlaygroundEditor: true
   }
