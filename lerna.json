@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/@t7/*"
+    "packages/*"
   ],
   "version": "independent"
 }
