@@ -1,13 +1,50 @@
+// Dependencies.
 import React from 'react'
-import { cleanup, render } from 'react-testing-library'
+import ReactDOM from 'react-dom'
+
+// UI components.
 import Render from './'
 
+// Helper.
 const renderWithProps = (props = {}) => {
-  return render(<Render {...props} />)
+  // Element.
+  const el = (
+    <div className='PARENT'>
+      <Render {...props} />
+    </div>
+  )
+
+  // Root.
+  const root =
+    document.getElementById('root')
+
+  // Render.
+  ReactDOM.render(el, root)
+
+  // Get parent.
+  const parent =
+    document.querySelector('.PARENT')
+
+  // Expose object.
+  return {
+    el,
+    parent
+  }
 }
 
-describe('Render component', () => {
-  afterEach(cleanup)
+// Describe `<Component/>` name.
+describe('Render', () => {
+  // ==============
+  // Clear the DOM.
+  // ==============
+
+  beforeEach(() => {
+    document.body.innerHTML = '<div id="root"></div>'
+  })
+
+  // ====================
+  // Test for valid `if`.
+  // ====================
 
   it('handles valid "if" props', () => {
     const props = {
@@ -15,10 +52,16 @@ describe('Render component', () => {
       children: 'TEST'
     }
 
-    const { container } = renderWithProps(props)
+    const { parent } =
+      renderWithProps(props)
 
-    expect(container.textContent).toBe(props.children)
+    expect(parent.textContent)
+      .toBe(props.children)
   })
+
+  // ======================
+  // Test for invalid `if`.
+  // ======================
 
   it('handles invalid "if" props', () => {
     const props = {
@@ -26,8 +69,10 @@ describe('Render component', () => {
       children: 'TEST'
     }
 
-    const { container } = renderWithProps(props)
+    const { parent } =
+      renderWithProps(props)
 
-    expect(container.textContent).toBe('')
+    expect(parent.textContent)
+      .toBe('')
   })
 })

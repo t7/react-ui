@@ -1,3 +1,4 @@
+// Dependencies.
 import React from 'react'
 import PropTypes from 'prop-types'
 import { cloneDeep, isEqual } from 'lodash'
@@ -8,11 +9,10 @@ import {
   unique
 } from '@t7/utils'
 
-import styles from './index.css'
-
 // UI Components.
 import AccordionHeader from './template_header'
 import AccordionPanel from './template_panel'
+import './index.css'
 
 // Define class.
 class Accordion extends React.Component {
@@ -133,7 +133,7 @@ class Accordion extends React.Component {
           ariaControls={idPanel}
           ariaExpanded={isActive}
           ariaSelected={isActive}
-          className={styles.header}
+          className='t7-accordion__header'
           id={idHeader}
           index={i}
           key={idHeader}
@@ -148,7 +148,7 @@ class Accordion extends React.Component {
         <dd
           aria-hidden={!isActive}
           aria-labelledby={idHeader}
-          className={styles.panel}
+          className='t7-accordion__panel'
           id={idPanel}
           key={idPanel}
           role='tabpanel'
@@ -161,7 +161,7 @@ class Accordion extends React.Component {
     // Expose the UI.
     return (
       <dl
-        className={styles.accordion}
+        className='t7-accordion'
         id={id}
         role='tablist'
         aria-multiselectable={multi}
