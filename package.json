@@ -15,9 +15,6 @@
     "lint:js": "eslint '**/*.js' --cache --fix",
     "test": "jest"
   },
-  "dependencies": {
-    "@t7/utils": "0.0.12"
-  },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
