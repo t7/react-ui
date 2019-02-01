@@ -12,5 +12,40 @@ import Image from './'
 ## Basic Usage
 
 <Playground>
-  <Image>This is a test!</Image>
+  <Image
+    alt='IMAGE 1'
+    width='800'
+    height='200'
+
+    // Source.
+    src='https://sloow.me/5000/placehold.it/800x200/69c/fff?text=IMAGE+1'
+
+    // Fallback source.
+    fallback='https://placehold.it/800x200/69c/fff?text=IMAGE+1+FALLBACK'
+
+    style={{
+      background: '#69c'
+    }}
+
+    // Intersection event.
+    onIntersection={(event) => {
+      if (window.console) {
+        window.console.log('IMAGE 1 INTERSECTION')
+      }
+    }}
+
+    // Load event.
+    onLoad={(event) => {
+      if (window.console) {
+        window.console.log('IMAGE 1 LOADED')
+      }
+    }}
+
+    // Fallback load event.
+    onFallback={(event) => {
+      if (window.console) {
+        window.console.log('IMAGE 1 FALLBACK LOADED')
+      }
+    }}
+  />
 </Playground>
