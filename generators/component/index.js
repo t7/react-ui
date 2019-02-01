@@ -1,5 +1,5 @@
 const SRC_DIR = 'generators/component/templates'
-const DEST_DIR = 'packages/{{dashCase name}}'
+const DEST_DIR = 'packages/@t7/{{dashCase name}}'
 
 module.exports = (plop) => {
   plop.setGenerator('component', {
