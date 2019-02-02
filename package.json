@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "prebootstrap": "npm run lint",
+    "build": "lerna run build",
     "clean": "lerna clean --yes",
     "create": "plop",
     "docz": "docz dev",

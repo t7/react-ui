@@ -33,7 +33,5 @@ module.exports = {
       filename: 'index.css'
     })
   ],
-  stats: {
-    modules: false
-  }
+  stats: 'errors-only'
 }

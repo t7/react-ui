@@ -15,7 +15,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --config ../../../webpack.config.js"
+    "build": "webpack --config ../../webpack.config.js"
   },
   "dependencies": {
     "@t7/utils": "0.0.14",
