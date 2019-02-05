@@ -8,8 +8,6 @@
     "bootstrap": "lerna bootstrap",
     "prebootstrap": "npm run clean",
     "build": "lerna run build",
-    "bump": "lerna version --no-git-tag-version --no-push",
-    "postbump": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "create": "plop",
     "docz": "docz dev",
@@ -18,7 +16,7 @@
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.js' --cache",
     "test": "jest",
-    "publish": "lerna publish",
+    "publish": "lerna publish --no-git-tag-version --no-push",
     "pretest": "npm run bootstrap"
   },
   "husky": {
