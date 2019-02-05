@@ -1,6 +1,6 @@
 {
   "name": "@t7/accordion-multi",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "Create a React 'accordion' with multiple expansion style component from a single structure",
   "keywords": [
@@ -20,7 +20,7 @@
     "build": "webpack --config ../../webpack.config.js"
   },
   "dependencies": {
-    "@t7/accordion": "^0.0.11",
+    "@t7/accordion": "^0.0.12",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {

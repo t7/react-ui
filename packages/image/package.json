@@ -1,6 +1,6 @@
 {
   "name": "@t7/image",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "This is a React component that loads an image source, only after it is partially or fully visible in the viewport",
   "keywords": [
