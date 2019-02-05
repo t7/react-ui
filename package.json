@@ -16,7 +16,7 @@
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.js' --cache",
-    "publish": "lerna publish --public --no-git-tag-version",
+    "publish": "lerna publish from-package --public --no-git-tag-version",
     "test": "jest",
     "pretest": "npm run bootstrap"
   },
