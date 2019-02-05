@@ -16,8 +16,7 @@
     "lint:js": "eslint '**/*.js' --cache",
     "test": "jest",
     "publish": "lerna publish",
-    "pretest": "npm run bootstrap",
-    "version": "lerna version"
+    "pretest": "npm run bootstrap"
   },
   "husky": {
     "hooks": {
