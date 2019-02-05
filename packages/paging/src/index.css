@@ -1,0 +1,40 @@
+.t7-react-paging {
+  display: flex;
+}
+
+.t7-react-paging__arrow--previous {
+  transform: rotate(180deg);
+}
+
+.t7-react-paging__item {
+  border: 3px;
+  display: flex;
+  min-height: 38px;
+  min-width: 36px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  outline-style: none;
+}
+
+.t7-react-paging__item:hover {
+  font-weight: bold;
+}
+
+.t7-react-paging__item:not(:first-of-type) {
+  margin-left: var(--sp-10);
+}
+
+.t7-react-paging__item-selected {
+  border: 3px solid black;
+}
+
+.t7-react-paging__item-ellipsis {
+  border: none;
+}
+
+.t7-react-paging__item-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

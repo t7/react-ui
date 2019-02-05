@@ -1,0 +1,27 @@
+---
+name: "@t7/paging"
+route: "/@t7/paging"
+---
+
+import { Playground, PropsTable } from 'docz'
+import Paging from './'
+
+# @t7/paging
+
+<PropsTable of={Paging} />
+
+## Basic Usage
+
+<Playground>
+  <Pager
+    className="m-t-100 w-100%"
+    pageIndex={0}
+    maxButtons={10}
+    autoLayout={true}
+    pageSize={10}
+    totalItems={10}
+    onPageChanged={() => {
+      console.log("page changed")
+    }}
+  />
+</Playground>
