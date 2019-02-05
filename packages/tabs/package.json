@@ -1,6 +1,6 @@
 {
   "name": "@t7/tabs",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "This React component renders tabs and the related panels",
   "keywords": [
@@ -27,5 +27,6 @@
   },
   "peerDependencies": {
     "react": "^16.0.0"
-  }
+  },
+  "gitHead": "d1c6085189f759f08a1f95384e8dca35371c9098"
 }
