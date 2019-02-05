@@ -7,5 +7,8 @@
   "packages": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "independent"
 }
