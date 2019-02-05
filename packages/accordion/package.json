@@ -1,6 +1,6 @@
 {
   "name": "@t7/accordion",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "Create a React 'accordion' style component from a single structure",
   "keywords": [
