@@ -1,0 +1,102 @@
+---
+name: "@t7/forms"
+route: "/@t7/forms"
+---
+
+import { Playground, PropsTable } from 'docz'
+import {
+  Button,
+  Checkbox,
+  Input,
+  Select,
+  Textarea,
+  Textdiv
+} from './'
+
+# @t7/forms/button
+
+<PropsTable of={Button} />
+
+# @t7/forms/checkbox
+
+<PropsTable of={Checkbox} />
+
+# @t7/forms/input
+
+<PropsTable of={Input} />
+
+# @t7/forms/select
+
+<PropsTable of={Select} />
+
+# @t7/forms/textarea
+
+<PropsTable of={Textarea} />
+
+# @t7/forms/textdiv
+
+<PropsTable of={Textdiv} />
+
+## Basic Usage
+
+<Playground>
+  <Button
+    mode='primary'
+    size='small'
+    children='Button'
+  />
+
+  <Checkbox
+    label='Checkbox'
+    checked={false}
+    handleChange={() => {
+      console.log('checked')
+    }}
+  />
+
+  <Input
+    required // true
+    label='Input'
+    value='test value'
+    handleChange={() => {
+      console.log('input changed')
+    }}
+  />
+
+  <Select
+    required // true
+    label='Select'
+    options={[
+      {
+        value: '',
+        name: 'Select...'
+      },
+      {
+        value: '1',
+        name: 'Uno'
+      },
+      {
+        value: '2',
+        name: 'Dos'
+      },
+      {
+        value: '3',
+        name: 'Tres'
+      }
+    ]}
+    value='1'
+    handleChange={() => {
+      console.log('select changed')
+    }}
+  />
+
+  <Textarea
+    label='Textarea'
+    value='test value'
+  />
+
+  <Textdiv
+    label='Textdiv'
+    value='test value'
+  />
+</Playground>
