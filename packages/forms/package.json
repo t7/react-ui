@@ -22,7 +22,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@t7/render": "0.0.7",
+    "@t7/render": "0.0.15",
     "@t7/utils": "0.0.13",
     "prop-types": "^15.6.2"
   },
