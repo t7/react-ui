@@ -1,6 +1,6 @@
 {
   "name": "@t7/render",
-  "version": "0.0.11",
+  "version": "0.0.15",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "This React component conditionally renders its children.",
   "keywords": [
@@ -13,9 +13,11 @@
   ],
   "license": "MIT",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "webpack --config ../../webpack.config.js",
-    "prepublish": "npm run build"
+    "build": "webpack --config ../../webpack.config.js"
   },
   "dependencies": {
     "prop-types": "^15.6.2"
@@ -26,5 +28,6 @@
   },
   "peerDependencies": {
     "react": "^16.0.0"
-  }
+  },
+  "gitHead": "86120853e838ee38c18b56c65414fa96d71bec1e"
 }

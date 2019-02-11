@@ -1,10 +1,15 @@
 {
-  "name": "@t7/paging",
-  "version": "0.0.2",
+  "name": "@t7/accordion-multi",
+  "version": "0.0.7",
   "author": "TandemSeven <github@tandemseven.com>",
-  "description": "t7-react-paging React component",
+  "description": "Create a React 'accordion' with multiple expansion style component from a single structure",
   "keywords": [
-    "react-component"
+    "accordion",
+    "expanded",
+    "multi",
+    "multiple",
+    "t7",
+    "tandemseven"
   ],
   "license": "MIT",
   "main": "dist/index.js",
@@ -12,16 +17,13 @@
     "access": "public"
   },
   "scripts": {
-    "build": "webpack --config ../../webpack.config.js",
-    "prepublish": "npm run build"
+    "build": "webpack --config ../../webpack.config.js"
   },
   "dependencies": {
+    "@t7/accordion": "^0.0.12",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.8.0",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   },

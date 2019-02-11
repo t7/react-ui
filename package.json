@@ -1,18 +1,22 @@
 {
-  "version": "1.0.0",
-  "author": "",
-  "description": "",
-  "license": "ISC",
-  "main": "index.js",
+  "version": "0.0.1",
+  "author": "TandemSeven <github@tandemseven.com>",
+  "description": "A collection of reusable components developed at Genpact T7",
+  "license": "MIT",
   "scripts": {
+    "add": "lerna add",
     "bootstrap": "lerna bootstrap",
-    "prebootstrap": "npm run lint",
+    "bump": "lerna version --no-push",
+    "build": "lerna run build",
     "clean": "lerna clean --yes",
     "create": "plop",
     "docz": "docz dev",
+    "predocz": "npm run bootstrap",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.js' --cache",
+    "postinstall": "npm run bootstrap",
+    "publish": "lerna publish from-package",
     "test": "jest"
   },
   "husky": {

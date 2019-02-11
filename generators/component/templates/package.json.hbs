@@ -6,9 +6,11 @@
   "keywords": [],
   "license": "MIT",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "webpack --config ../../webpack.config.js",
-    "prepublish": "npm run build"
+    "build": "webpack --config ../../webpack.config.js"
   },
   "dependencies": {
     "prop-types": "^15.6.2"

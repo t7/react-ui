@@ -13,7 +13,11 @@ the current page number will be passed to the supplied function.
 
 ```jsx static
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import Pager from 't7-Componts/react-paging'
+=======
+import Pager from '@t7/paging'
+>>>>>>> 82827d58da677228d9c5f6632ce5e0f71b37f9c3
 
 export class XComponent extends Component { 
 
