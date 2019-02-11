@@ -22,21 +22,6 @@ View on NPM:
 
 ---
 
-<<<<<<< HEAD
-Demo page:
-
-[https://t7-components.github.io/image/build/](https://t7-components.github.io/image/build/)
-
----
-
-Test coverage:
-
-[https://t7-components.github.io/image/coverage/lcov-report/](https://t7-components.github.io/image/coverage/lcov-report/)
-
----
-
-=======
->>>>>>> 82827d58da677228d9c5f6632ce5e0f71b37f9c3
 ## Image Props
 
 The `<Image>` component uses `width` and `height` props to force an immediate layout, as if the image source had already been loaded. This prevents unnecessary recalculations by the browser and allows the image to be resized via CSS with proportional aspect ratios.
@@ -174,8 +159,4 @@ Example: After (at least) 3 seconds, image load fails.
   width="400"
   height="225"
 />
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 82827d58da677228d9c5f6632ce5e0f71b37f9c3
