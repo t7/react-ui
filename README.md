@@ -1,1 +1,1 @@
-# @t7/components
+# @t7/react-ui
