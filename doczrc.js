@@ -10,7 +10,7 @@ module.exports = {
     })
     return config
   },
-  title: '@t7/components',
+  title: '@t7/react-ui',
   themeConfig: {
     showPlaygroundEditor: true
   }

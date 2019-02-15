@@ -1,5 +1,30 @@
 # @t7/react-ui
-
 **[View Docs](https://t7.github.io/react-ui)**
 
-During our many client engagements using React, we have developed some useful components. We recognized that we have been the recipients of many wonderful open source libraries, and we hope that `@t7/react-ui` will be as useful to others as it is to us.
+During our many client engagements using React, we have developed some useful components. We recognized that we have been the recipients of many wonderful open source libraries, and we hope that @t7/react-ui will be as useful to others as it is to us.
+
+## Getting Started
+Install any of our components from our namespace using `npm install @t7/<component-name>` and simply import the CSS if applicable:
+
+```
+import React from 'react';
+import { render } from 'react-dom';
+
+import Accordion, { AccordionPanel } from '@t7/accordion';
+import '@t7/accordion/dist/index.css';
+
+function App() {
+  return (
+    <Accordion>
+      <AccordionPanel label="Item 1">
+        <p>Content for Item 1</p>
+      </AccordionPanel>
+      <AccordionPanel label="Item 2">
+        <p>Content for Item 2</p>
+      </AccordionPanel>
+    </Accordion>
+  )
+}
+
+render(<App />, document.getElementById('root'));
+```
