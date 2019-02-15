@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/react-ui/',
   codeSandbox: false,
   dest: 'docs',
   modifyBundlerConfig: (config) => {
