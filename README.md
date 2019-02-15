@@ -6,7 +6,7 @@ During our many client engagements using React, we have developed some useful co
 ## Getting Started
 Install any of our components from our namespace using `npm install @t7/<component-name>` and simply import the CSS if applicable:
 
-```
+```js
 import React from 'react';
 import { render } from 'react-dom';
 
