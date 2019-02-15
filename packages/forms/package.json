@@ -1,6 +1,6 @@
 {
   "name": "@t7/forms",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "This is a collection of React form element components.",
   "keywords": [
@@ -22,7 +22,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@t7/render": "^0.0.15",
+    "@t7/render": "^0.0.16",
     "@t7/utils": "0.0.13",
     "prop-types": "^15.6.2"
   },
