@@ -1,6 +1,6 @@
 {
   "name": "@t7/list-inline",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "TandemSeven <github@tandemseven.com>",
   "description": "Create a React inline list from an unordered HTML list (<ul>/<li>)",
   "keywords": [
