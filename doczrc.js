@@ -2,6 +2,7 @@ module.exports = {
   base: '/react-ui/',
   codeSandbox: false,
   dest: 'docs',
+  hashRouter: true,
   modifyBundlerConfig: (config) => {
     config.module.rules.push({
       test: /\.css$/,
