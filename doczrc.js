@@ -1,6 +1,6 @@
 module.exports = {
   codeSandbox: false,
-  dest: 'dist',
+  dest: 'docs',
   modifyBundlerConfig: (config) => {
     config.module.rules.push({
       test: /\.css$/,
