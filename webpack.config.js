@@ -8,7 +8,24 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   externals: {
-    react: 'commonjs react'
+    classnames: {
+      commonjs: 'classnames',
+      commonjs2: 'classnames',
+      amd: 'classnames',
+      root: '_'
+    },
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    },
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: '_'
+    }
   },
   module: {
     rules: [
