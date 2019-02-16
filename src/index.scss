@@ -1,0 +1,17 @@
+@import 'assets/styles/theme.scss';
+
+body {
+  background-color: $color-white;
+  font-size: $theme-font-size;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.75rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 2.5rem;
+}

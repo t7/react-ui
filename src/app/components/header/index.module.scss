@@ -1,0 +1,17 @@
+@import 'assets/styles/theme.scss';
+
+.header {
+  background-color: $color-off-white;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 2rem;
+    margin-bottom: $gutter * 2;
+    margin-top: $gutter * 2;
+  }
+}

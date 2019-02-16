@@ -1,0 +1,34 @@
+@import 'assets/styles/theme.scss';
+
+.navigation {
+  color: $color-turquoise;
+  font-size: 1.5rem;
+
+  a {
+    color: $color-turquoise;
+    text-decoration: none;
+  }
+
+  .trigger {
+    background: none;
+    border: none;
+    color: $color-turquoise;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .list {
+    display: inline-flex;
+    list-style: none;
+
+    li + li {
+      margin-left: $gutter;
+    }
+  }
+
+  .drop-down:not(.active) {
+    display: none;
+  }
+}
