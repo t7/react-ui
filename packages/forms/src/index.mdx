@@ -41,63 +41,75 @@ import {
 ## Basic Usage
 
 <Playground>
-  <Button
-    mode='primary'
-    size='small'
-    children='Button'
-  />
+  <p>
+    <Button
+      mode='primary'
+      size='small'
+      children='Button'
+    />
+  </p>
 
-  <Checkbox
-    label='Checkbox'
-    checked={false}
-    handleChange={() => {
-      console.log('checked')
-    }}
-  />
+  <p>
+    <Checkbox
+      label='Checkbox'
+      checked={false}
+      handleChange={() => {
+        console.log('checked')
+      }}
+    />
+  </p>
 
-  <Input
-    required // true
-    label='Input'
-    value='test value'
-    handleChange={() => {
-      console.log('input changed')
-    }}
-  />
+  <p>
+    <Input
+      required // true
+      label='Input'
+      value='test value'
+      handleChange={() => {
+        console.log('input changed')
+      }}
+    />
+  </p>
 
-  <Select
-    required // true
-    label='Select'
-    options={[
-      {
-        value: '',
-        name: 'Select...'
-      },
-      {
-        value: '1',
-        name: 'Uno'
-      },
-      {
-        value: '2',
-        name: 'Dos'
-      },
-      {
-        value: '3',
-        name: 'Tres'
-      }
-    ]}
-    value='1'
-    handleChange={() => {
-      console.log('select changed')
-    }}
-  />
+  <p>
+    <Select
+      required // true
+      label='Select'
+      options={[
+        {
+          value: '',
+          name: 'Select...'
+        },
+        {
+          value: '1',
+          name: 'Uno'
+        },
+        {
+          value: '2',
+          name: 'Dos'
+        },
+        {
+          value: '3',
+          name: 'Tres'
+        }
+      ]}
+      value='1'
+      handleChange={() => {
+        console.log('select changed')
+      }}
+    />
+  </p>
 
-  <Textarea
-    label='Textarea'
-    value='test value'
-  />
+  <p>
+    <Textarea
+      label='Textarea'
+      value='test value'
+    />
+  </p>
 
-  <Textdiv
-    label='Textdiv'
-    value='test value'
-  />
+  <p>
+    <Textdiv
+      label='Textdiv'
+      value='test value'
+    />
+  </p>
 </Playground>
