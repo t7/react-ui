@@ -10,12 +10,11 @@ const OBSERVERS = new WeakMap()
 const REACT_MAP = new WeakMap()
 
 /**
-* The `<Image>` component displays an
-* image when it is nearly/fully visible.
-*
-* @typedef {Object} Image
-*/
-
+ * The `<Image>` component displays an
+ * image when it is nearly/fully visible.
+ *
+ * @typedef {Object} Image
+ */
 class Image extends React.Component {
   constructor (props) {
     // Pass `props` into scope.
@@ -25,30 +24,30 @@ class Image extends React.Component {
     bind(this)
 
     /**
-    * The primary image.
-    *
-    * @member {Image} image
+     * The primary image.
+     *
+     * @member {Image} image
     */
     this.image = React.createRef()
 
     /**
-    * The preloader image.
-    *
-    * @member {Image} preloader.
+     * The preloader image.
+     *
+     * @member {Image} preloader.
     */
     this.preloader = new window.Image()
 
     /**
-    * Styles temporarily overridden on the image.
-    *
-    * @member {Object} preservedStyle
+     * Styles temporarily overridden on the image.
+     *
+     * @member {Object} preservedStyle
     */
     this.preservedStyle = {}
   }
 
   /**
-  * First mount.
-  */
+   * First mount.
+   */
   componentDidMount () {
     // Map element to instance.
     REACT_MAP.set(this.image.current, this)
@@ -69,8 +68,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Clean up.
-  */
+   * Clean up.
+   */
   componentWillUnmount () {
     // Get observer.
     const intersectionObserver =
@@ -91,8 +90,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Runs after render.
-  */
+   * Runs after render.
+   */
   componentDidUpdate (prevProps = {}) {
     // New source?
     if (this.props.src !== prevProps.src) {
@@ -136,16 +135,16 @@ class Image extends React.Component {
   }
 
   /**
-  * Add events.
-  */
+   * Add events.
+   */
   addEventListeners () {
     this.preloader.addEventListener('load', this.onPreloaderLoad)
     this.preloader.addEventListener('error', this.onPreloaderError)
   }
 
   /**
-  * Remove events.
-  */
+   * Remove events.
+   */
   removeEventListeners () {
     this.image.current.removeEventListener('load', this.onImageLoad)
     this.preloader.removeEventListener('load', this.onPreloaderLoad)
@@ -153,8 +152,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Preloader load.
-  */
+   * Preloader load.
+   */
   onPreloaderLoad () {
     // Add event.
     this.image.current.addEventListener('load', this.onImageLoad)
@@ -164,8 +163,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Preloader fail.
-  */
+   * Preloader fail.
+   */
   onPreloaderError () {
     if (this.props.fallback) {
       // Add event.
@@ -177,8 +176,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Image load.
-  */
+   * Image load.
+   */
   onImageLoad (event) {
     // Remove placeholder styles.
     this.image.current.style.backgroundImage =
@@ -199,8 +198,8 @@ class Image extends React.Component {
   }
 
   /**
-  * Image intersection.
-  */
+   * Image intersection.
+   */
   onIntersection () {
     // Get background.
     this.preservedStyle.backgroundImage =
@@ -240,17 +239,17 @@ class Image extends React.Component {
   }
 
   /**
-  * Inline SVG with width and height.
-  *
-  * The width of the image.
-  * @param {Number|String} width
-  *
-  * The height of the image.
-  * @param {Number|String} height
-  *
-  * The inline SVG as a data source.
-  * @return {String}
-  */
+   * Inline SVG with width and height.
+   *
+   * The width of the image.
+   * @param {Number|String} width
+   *
+   * The height of the image.
+   * @param {Number|String} height
+   *
+   * The inline SVG as a data source.
+   * @return {String}
+   */
   getPreloaderSrc (width, height) {
     const w = Number(width) || 0
     const h = Number(height) || 0
@@ -361,11 +360,11 @@ class Image extends React.Component {
   }
 
   /**
-  * Renders image, placeholder, and fallback.
-  *
-  * @return {Image} - The image element.
-  * See {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img Image}.
-  */
+   * Renders image, placeholder, and fallback.
+   *
+   * @return {Image} - The image element.
+   * See {@link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img Image}.
+   */
   render () {
     // Get source.
     const src =
@@ -396,66 +395,66 @@ class Image extends React.Component {
 // Validation.
 Image.propTypes = {
   /**
-  * The image URL.
-  */
+   * The image URL.
+   */
   src: PropTypes.string,
 
   /**
-  * The alternative text describing the image.
-  */
+   * The alternative text describing the image.
+   */
   alt: PropTypes.string,
 
   /**
-  * The placeholder image URL.
-  */
+   * The placeholder image URL.
+   */
   placeholder: PropTypes.string,
 
   /**
-  * The fallback image URL.
-  */
+   * The fallback image URL.
+   */
   fallback: PropTypes.string,
 
   /**
-  * The intrinsic width of the image in pixels.
-  */
+   * The intrinsic width of the image in pixels.
+   */
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
   ]),
 
   /**
-  * The intrinsic height of the image in pixels.
-  */
+   * The intrinsic height of the image in pixels.
+   */
   height: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
   ]),
 
   /**
-  * The root element to check intersection.
-  *
-  * For the window's viewport, this should
-  * be left empty, and defaults to `null`.
-  */
+   * The root element to check intersection.
+   *
+   * For the window's viewport, this should
+   * be left empty, and defaults to `null`.
+   */
   root: PropTypes.object,
 
   /**
-  * The amount to grow or shrink each side of
-  * the document when computing intersections.
-  */
+   * The amount to grow or shrink each side of
+   * the document when computing intersections.
+   */
   rootMargin: PropTypes.string,
 
   /**
-  * Inline style object, to force initial
-  * dimensions and proportions for image.
-  */
+   * Inline style object, to force initial
+   * dimensions and proportions for image.
+   */
   style: PropTypes.object,
 
   /**
-  * A single number or array of numbers, indicating
-  * at what percentage of an image's visibility its
-  * observer's callback should be executed.
-  */
+   * A single number or array of numbers, indicating
+   * at what percentage of an image's visibility its
+   * observer's callback should be executed.
+   */
   thresholds: PropTypes.oneOfType([
     PropTypes.arrayOf(
       PropTypes.oneOfType([
@@ -468,21 +467,21 @@ Image.propTypes = {
   ]),
 
   /**
-  * Function that runs when image
-  * intersects with viewable area.
-  */
+   * Function that runs when image
+   * intersects with viewable area.
+   */
   onIntersection: PropTypes.func,
 
   /**
-  * Function that runs
-  * when image is loaded.
-  */
+   * Function that runs
+   * when image is loaded.
+   */
   onLoad: PropTypes.func,
 
   /**
-  * Function that runs when
-  * fallback image is loaded.
-  */
+   * Function that runs when
+   * fallback image is loaded.
+   */
   onFallback: PropTypes.func
 }
 
