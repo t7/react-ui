@@ -1,6 +1,4 @@
 .docz
 .eslintcache
-dist
 lerna-debug.log
-package-lock.json
 node_modules
