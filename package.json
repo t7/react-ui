@@ -16,7 +16,7 @@
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint **/*.css",
     "lint:js": "eslint **/*.js --cache",
-    "postinstall": "npm run bootstrap",
+    "postinstall": "lerna run build && npm run bootstrap",
     "publish": "lerna publish from-package",
     "predocz": "npm run bootstrap",
     "test": "jest"
