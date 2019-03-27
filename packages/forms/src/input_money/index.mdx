@@ -1,0 +1,33 @@
+---
+menu: 'Components'
+name: "Forms/InputMoney"
+route: "/forms/input_money"
+---
+
+import { Playground, PropsTable } from 'docz'
+import InputMoney from './input_money'
+
+# @t7/forms/input_money
+
+## Props
+
+<PropsTable of={InputMoney} />
+
+## Usage
+
+```js
+import { InputMoney } from '@t7/forms'
+```
+
+This is a base `class`, used by other components via composition. You probably shouldn't use it directly.
+
+It will take an incoming `string` or `number` value and will apply a mask that is provided by its parent.
+
+It is used by components such as these:
+
+- `InputMoneyDE`
+- `InputMoneyIN`
+- `InputMoneyJP`
+- `InputMoneyKR`
+- `InputMoneyUS`
+- `InputMoneyUK`
