@@ -7,11 +7,41 @@ route: "/render"
 import { Playground, PropsTable } from 'docz'
 import Render from './'
 
-# render
+# @t7/render
+
+## Props
 
 <PropsTable of={Render} />
 
-## Basic Usage
+## Usage
+```js
+// ================
+// TRUTHY EXAMPLES.
+// ================
+
+<Render if={true}>
+  This renders.
+</Render>
+
+<Render if={somethingTruthy}>
+  This renders.
+</Render>
+
+// ===============
+// FALSY EXAMPLES.
+// ===============
+
+<Render if={false}>
+  This does not render.
+</Render>
+
+<Render if={0 || '' || NaN || null || undefined}>
+  This does not render.
+</Render>
+```
+
+
+## Demo
 
 <Playground>
   <Render if={true}>

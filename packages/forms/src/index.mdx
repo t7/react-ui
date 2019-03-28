@@ -14,102 +14,78 @@ import {
   Textdiv
 } from './'
 
-# forms/button
+# @t7/forms
 
-<PropsTable of={Button} />
 
-# forms/checkbox
+This is a collection of React form element components.
 
-<PropsTable of={Checkbox} />
+To use the CSS, be sure to import it into your project.
 
-# forms/input
+```js
+// Example: In a root JS file.
+import '@t7/forms/dist/index.css'
+```
 
-<PropsTable of={Input} />
+```css
+/* Example: In a root CSS file. */
+@import "./node_modules/@t7/forms/dist/index.css";
+```
+___
 
-# forms/select
+Component documentation:
 
-<PropsTable of={Select} />
+[Button](./#/forms/button)
 
-# forms/textarea
+[Checkbox](./#/forms/checkbox)
 
-<PropsTable of={Textarea} />
+[Input](./#/forms/input)
 
-# forms/textdiv
+[InputAlphanumeric](./#/forms/input_alphanumeric)
 
-<PropsTable of={Textdiv} />
+[InputDate](./#/forms/input_date)
 
-## Basic Usage
+[InputDateUK](./#/forms/input_date_uk)
 
-<Playground>
-  <p>
-    <Button
-      mode='primary'
-      size='small'
-      children='Button'
-    />
-  </p>
+[InputDateUS](./#/forms/input_date_us)
 
-  <p>
-    <Checkbox
-      label='Checkbox'
-      checked={false}
-      handleChange={() => {
-        console.log('checked')
-      }}
-    />
-  </p>
+[InputInteger](./#/forms/input_integer)
 
-  <p>
-    <Input
-      required // true
-      label='Input'
-      value='test value'
-      handleChange={() => {
-        console.log('input changed')
-      }}
-    />
-  </p>
+[InputMoney](./#/forms/input_money)
 
-  <p>
-    <Select
-      required // true
-      label='Select'
-      options={[
-        {
-          value: '',
-          name: 'Select...'
-        },
-        {
-          value: '1',
-          name: 'Uno'
-        },
-        {
-          value: '2',
-          name: 'Dos'
-        },
-        {
-          value: '3',
-          name: 'Tres'
-        }
-      ]}
-      value='1'
-      handleChange={() => {
-        console.log('select changed')
-      }}
-    />
-  </p>
+[InputMoneyDE](./#/forms/input_money_de)
 
-  <p>
-    <Textarea
-      label='Textarea'
-      value='test value'
-    />
-  </p>
+[InputMoneyIN](./#/forms/input_money_in)
 
-  <p>
-    <Textdiv
-      label='Textdiv'
-      value='test value'
-    />
-  </p>
-</Playground>
+[InputMoneyJP](./#/forms/input_money_jp)
+
+[InputMoneyKR](./#/forms/input_money_kr)
+
+[InputMoneyUK](./#/forms/input_money_uk)
+
+[InputMoneyUS](./#/forms/input_money_us)
+
+[InputPhoneUS](./#/forms/input_phone_us)
+
+[InputSSN](./#/forms/input_ssn)
+
+[Label](./#/forms/label)
+
+[Radio](./#/forms/radio)
+
+[Textarea](./#/forms/textarea)
+
+[Textdiv](./#/forms/textdiv)
+
+---
+
+View on NPM:
+
+[https://www.npmjs.com/package/@t7/forms](https://www.npmjs.com/package/@t7/forms)
+
+---
+
+Demo page:
+
+[https://t7-components.github.io/forms/build/](https://t7-components.github.io/forms/build/)
+
+---

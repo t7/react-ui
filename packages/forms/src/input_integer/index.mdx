@@ -1,0 +1,47 @@
+---
+menu: 'Components'
+name: "Forms/InputInteger"
+route: "/forms/input_integer"
+---
+
+import { Playground, PropsTable } from 'docz'
+import InputInteger from './input_integer'
+
+# @t7/forms/input_integer
+
+## Props
+
+<PropsTable of={InputInteger} />
+
+## Usage
+
+```js
+import { InputInteger } from '@t7/forms'
+```
+
+This component is used to format an integer (whole number) value.
+
+It supports the same props as a typical `<Input>` component, but provides `formatInteger` from `@t7/utils` as its `mask` by default.
+
+```js
+// Event callback.
+const handleChange = (e, value) => {
+  /*
+    `e` = browser event.
+
+    `value` = integer string.
+  */
+}
+```
+
+```jsx
+<InputInteger
+  /*
+    NOTE: All other props
+    are similar to `Input`.
+  */
+
+  // Events.
+  handleChange={handleChange}
+/>
+```
